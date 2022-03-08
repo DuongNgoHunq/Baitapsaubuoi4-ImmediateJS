@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get api</title>
+</head>
+<body>
+    <p id="name">Họ tên</p>
+    <p id="email">Email</p>
+    <p id="dob">Ngày sinh</p>
+    <p id="address">Địa chỉ</p>
+    <p id="phone">Số điện thoại</p>
+    <script>
+        async function getUser() {
+          const response = await fetch('https://randomuser.me/api/');
+          const datas = await response.json();
+          const user = datas.results[0];
+          document.getElementById("name").innerText = "Họ tên :" + user.name.title +" "+ user.name.first + " " + user.name.last;
+          document.getElementById("email").innerText = "Email :" + user.email;
+          document.getElementById("dob").innerText = "Ngày sinh: " + user.dob.date;
+          document.getElementById("address").innerText = "Địa chỉ: " +user.location.city + " " + user.location.country;
+          document.getElementById("phone").innerText ="Số điện thoại: " + user.phone;
+        }
+        getUser();
+      </script>
+</body>
+</html>

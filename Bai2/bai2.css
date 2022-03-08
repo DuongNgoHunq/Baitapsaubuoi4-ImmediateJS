@@ -1,0 +1,115 @@
+
+.container {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.timer {
+    font-size: 70px;
+    border: 3px solid black;
+    padding: 10px 50px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.second-container{
+    position: relative;
+}
+.millisec{
+    font-size: 20px;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+.bottomPart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns {
+    /* width: 300px; */
+    height: 100px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns.on{
+    display: flex;
+}
+.btns-setting.off{
+    display: none;
+}
+
+.btns button {
+    width: 100px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+}
+
+.btns .toggle-btn {
+    transition: all 0.3s ease;
+    background-color: blue;
+    margin-right: 50px;
+}
+.btns .toggle-btn.on {
+    background-color: #16b611;
+}
+.btns .clear-btn{
+    transition: all 0.3s ease;
+    background-color: red;
+}
+.btns-setting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    margin: 20px 0;
+}
+.number-btn{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 15px;
+    background-color:  #16b611;
+    outline: none;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btns-control{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btns-control .clear{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 15px;
+    width: 140px;
+    outline: none;
+    border: 3px solid  black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.setting{
+    background-color: #16b611;
+    font-size: 25px;
+    font-weight: bold;
+    width: 140px;
+    border: 3px solid  black;
+    border-radius: 10px;
+}
+.clear{
+    background-color: rgb(211, 197, 197);
+    margin-top: 10px;
+}
